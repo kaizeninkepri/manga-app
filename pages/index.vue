@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <!-- <img :src="count.data.images.webp.image_url" />
+  <div class="mt-4">
+    <!-- <img :src="count.data.images.webp.image_url" />
         {{ count.data.images.webp.image_url }} -->
-        <!-- <v-row>
+    <!-- <v-row>
             <v-col cols="1" v-for="i in manga.data">
                 <v-card>
                     <v-img v-if="i.relationships[2].attributes" aspect-ratio="4/3"
@@ -21,11 +21,15 @@
             </v-col>
         </v-row> -->
 
-        <MangaTop />
+    <MangaTop />
 
-    </div>
+  </div>
 </template>
 <script setup>
-const { data: manga } = await useFetch('https://api.mangadex.org/manga?includes[]=cover_art')
-
+// definePageMeta({
+//   layout: (ctx) => (ctx.isMobile ? "mobile" : "default"),
+// });
+// const { data: manga } = await useFetch(
+//   "https://api.mangadex.org/manga?includes[]=cover_art"
+// );
 </script>
