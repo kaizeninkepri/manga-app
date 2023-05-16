@@ -24,23 +24,19 @@
         ></v-text-field>
         <v-btn
           class="me-2 text-none"
-          color="#4f545c"
-          prepend-icon="mdi-export-variant"
+          color="primary"
+          prepend-icon="mdi-login"
           variant="flat"
         >
           login
         </v-btn>
         <v-btn
           class="me-2 text-none"
-          color="#4f545c"
-          prepend-icon="mdi-export-variant"
+          color="third"
+          prepend-icon="mdi-account-plus"
           variant="flat"
         >
           Register
-        </v-btn>
-
-        <v-btn icon>
-          <v-icon>mdi-heart</v-icon>
         </v-btn>
       </v-app-bar>
       <!-- <v-toolbar

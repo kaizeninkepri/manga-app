@@ -1,16 +1,16 @@
 body {
-    background: #27272b;
+  /* background: #191a19; */
 }
 
 .headerBg {
-    background-color: #27272b !important; 
-    color: white !important;
+  background-color: #191a19 !important;
+  color: white !important;
 }
 
 .textTitle2Lines {
-    line-height: 1.5em;
-    height: 3em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+  line-height: 1.5em;
+  height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
