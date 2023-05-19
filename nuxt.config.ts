@@ -1,5 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: "Daily Manga - Read, Watch and News Manga",
+      meta: [
+        {
+          name: "description",
+          content: "Read and watch your Favorite Manga Anime Online",
+        },
+      ],
+    },
+  },
   css: [
     "vuetify/lib/styles/main.sass",
     "@mdi/font/css/materialdesignicons.min.css",
@@ -8,10 +19,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
-  image: {
-    baseURL: "https://upload.mangadex.org/covers",
-  },
-  buildModules: ["@nuxt/image"],
+
   modules: ["@nuxtjs/device"],
   device: {
     refreshOnResize: true,

@@ -6,7 +6,7 @@
       show-arrows
     >
       <v-slide-group-item
-        v-for="i in manga.data"
+        v-for="i in mangas"
         :key="i.mal_id"
       >
         <v-card
@@ -30,20 +30,12 @@
             </template>
           </v-img>
           <v-card-text>
-            <v-tooltip
-              :text="i.title"
-              location="top"
-            >
-              <template v-slot:activator="{ props }">
-                <p
-                  class="text-subtitle-2 textTitle2Lines"
-                  v-bind="props"
-                > {{
-                                    i.title }}</p>
-              </template>
-            </v-tooltip>
-
-            <!-- <NuxtLink :to="'/manga/' + i.mal_id">{{ i }}</NuxtLink> -->
+            <NuxtLink :to="'/manga/' + i.mal_id">
+              <p
+                class="text-subtitle-2 textTitle2Lines"
+                v-bind="props"
+              > {{ i.title }}</p>
+            </NuxtLink>
           </v-card-text>
           <v-card-actions>
             <v-rating
@@ -65,7 +57,5 @@
   </div>
 </template>
 <script setup>
-const { data: manga } = await useFetch(
-  "https://api.jikan.moe/v4/top/manga?limit=10"
-);
+const { mangas } = defineProps(["mangas"]);
 </script>
