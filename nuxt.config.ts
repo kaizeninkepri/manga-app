@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     transpile: ["vuetify"],
   },
 
-  modules: ["@nuxtjs/device"],
+  modules: ["@nuxtjs/device", "nuxt-time"],
   device: {
     refreshOnResize: true,
   },
