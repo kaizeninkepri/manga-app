@@ -80,8 +80,8 @@
         </v-row>
         <v-row class="justify-center">
           <v-col cols="11">
-            <h2 class="pl-12 ml-2 mb-2">Characters <span class="ml-1">({{ characters.length }})</span></h2>
-            <CharactersList :characters="characters" />
+            <h2 class="pl-12 ml-2 mb-2">Characters</h2>
+            <CharactersList :id="id" />
           </v-col>
         </v-row>
 
@@ -140,20 +140,4 @@ const { pending, data: manga } = await useAsyncData(
     transform: (_manga) => _manga.data,
   }
 );
-const { pending: loadingCharacters, data: characters } = await useAsyncData(
-  "characters",
-  () => $fetch("/api/manga/charackterByManga?id=" + id),
-  {
-    transform: (_manga) => _manga.data,
-  }
-);
-
-const { pending: loadingRecomendations, data: recomendations } =
-  await useAsyncData(
-    "recomendations",
-    () => $fetch("/api/manga/recomendations?id=" + id),
-    {
-      transform: (_manga) => _manga.data,
-    }
-  );
 </script>

@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
-
+  alias: { assets: "/<rootDir>/assets" },
   modules: ["@nuxtjs/device", "nuxt-time"],
   device: {
     refreshOnResize: true,

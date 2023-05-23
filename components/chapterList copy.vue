@@ -6,29 +6,28 @@
       class="mb-1"
     >
       <v-card-actions>
-
-        <v-list-item class="w-100">
-          <NuxtLink :to="'/read/' + i.id">
+        <NuxtLink :to="'/read/' + i.id">
+          <v-list-item class="w-100">
             <v-list-item-title>Chapter {{ i.attributes.chapter }}</v-list-item-title>
 
             <v-list-item-subtitle>Volume {{ i.attributes.volume }}</v-list-item-subtitle>
 
-          </NuxtLink>
-          <template v-slot:append>
+            <template v-slot:append>
 
-            <div class="justify-self-end">
+              <div class="justify-self-end">
 
-              <v-icon
-                class="me-1"
-                size="sm"
-                icon="mdi-clock-outline"
-              ></v-icon>
-              <NuxtTime :datetime="i.attributes.publishAt" />
+                <v-icon
+                  class="me-1"
+                  size="sm"
+                  icon="mdi-clock-outline"
+                ></v-icon>
+                <NuxtTime :datetime="i.attributes.publishAt" />
 
-            </div>
-          </template>
+              </div>
+            </template>
 
-        </v-list-item>
+          </v-list-item>
+        </NuxtLink>
       </v-card-actions>
     </v-card>
   </div>
@@ -44,7 +43,7 @@ const { pending: loading, data: chapters } = await useAsyncData(
 );
 
 const filterChapters = computed(() => {
-  return chapters.value.filter((e) => {
+  return data.value.filter((e) => {
     if (e.attributes.links != null) {
       if (e.attributes.links.hasOwnProperty("mal")) {
         if (e.attributes.links.mal == id) {

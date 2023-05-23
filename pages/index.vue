@@ -1,8 +1,11 @@
 <template>
   <div>
-    <MangaTop :mangas="manga" />
-
-    <nuxt-link to="/manga">manga</nuxt-link>
+    <SeasonNow class="mb-6" />
+    <v-row class="justify-center">
+      <v-col cols="10">
+        <MangaTop :mangas="manga" />
+      </v-col>
+    </v-row>
   </div>
 </template>
 <script setup>
