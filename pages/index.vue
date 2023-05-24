@@ -4,6 +4,11 @@
     <v-row class="justify-center">
       <v-col cols="10">
         <MangaTop :mangas="manga" />
+        <v-row class="mt-6">
+          <v-col cols="8">
+            <chaptersUpdate />
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </div>
