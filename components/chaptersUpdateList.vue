@@ -5,7 +5,7 @@
       :key="index"
     >
       <NuxtLink :to="'/read/' + i.id">
-        <span class="text-caption"> Chapters {{ i.attributes.chapter }} </span>
+        <span class="text-caption"> Chapter {{ i.attributes.chapter }} </span>
       </NuxtLink>
     </div>
 
