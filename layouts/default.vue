@@ -9,6 +9,11 @@
       >
 
         <v-app-bar-title>
+          <!-- <v-avatar>
+            <img
+              src="assets/images/logo.png"
+              width="60px"
+            /></v-avatar> -->
           <NuxtLink to="/"> Dailymangas.com </NuxtLink>
         </v-app-bar-title>
         <v-spacer></v-spacer>
